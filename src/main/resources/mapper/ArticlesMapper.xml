@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.myzsl.myblog.mapper.ArticlesMapper">
+
+    <resultMap id="BaseResultMap" type="xyz.myzsl.myblog.domain.Article">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="author" column="author" jdbcType="VARCHAR"/>
+            <result property="category" column="category" jdbcType="VARCHAR"/>
+            <result property="tabloid" column="tabloid" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="tags" column="tags" jdbcType="VARCHAR"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="type" column="type" jdbcType="INTEGER"/>
+            <result property="views" column="views" jdbcType="INTEGER"/>
+            <result property="gmtCreate" column="gmt_create" jdbcType="BIGINT"/>
+            <result property="gmtUpdate" column="gmt_update" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,author,category,
+        tabloid,content,tags,
+        title,type,views,
+        gmt_create,gmt_update
+    </sql>
+</mapper>
